@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleNpz", "SimpleNpz.csproj", "{24696DA1-7C68-4FC2-8A30-13888054B339}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24696DA1-7C68-4FC2-8A30-13888054B339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24696DA1-7C68-4FC2-8A30-13888054B339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24696DA1-7C68-4FC2-8A30-13888054B339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24696DA1-7C68-4FC2-8A30-13888054B339}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
