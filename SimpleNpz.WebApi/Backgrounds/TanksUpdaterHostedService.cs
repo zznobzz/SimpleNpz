@@ -1,5 +1,4 @@
-﻿using SimpleNpz.Services;
-using SimpleNpz.Services.Abstractions;
+﻿using SimpleNpz.Services.Abstractions;
 
 namespace SimpleNpz.WebApi.Backgrounds;
 
@@ -10,7 +9,9 @@ public class TanksUpdaterHostedService : BackgroundService
     private readonly IHostApplicationLifetime _lifetime;
     private readonly ILogger<TanksUpdaterHostedService> _logger;
 
-    public TanksUpdaterHostedService(IServiceScopeFactory scopeFactory, IHostApplicationLifetime lifetime, ILogger<TanksUpdaterHostedService> logger)
+    public TanksUpdaterHostedService(IServiceScopeFactory scopeFactory,
+        IHostApplicationLifetime lifetime, 
+        ILogger<TanksUpdaterHostedService> logger)
     {
         _scopeFactory = scopeFactory;
         _lifetime = lifetime;
@@ -24,26 +25,6 @@ public class TanksUpdaterHostedService : BackgroundService
             return;
         _timer = new Timer(UpdateTankers, null, TimeSpan.Zero,
             TimeSpan.FromSeconds(60));
-
-        // Приложение запущено и готово к обработке запросов
-        
-
-        // Выполняем задачу пока не будет запрошена остановка приложения
-        /*while (!stoppingToken.IsCancellationRequested)
-        {
-            
-            try
-            {
-               
-            }
-            catch (Exception ex)
-            {
-                // обработка ошибки однократного неуспешного выполнения фоновой задачи
-            }
-
-            await Task.Delay(TimeSpan.FromSeconds(60));
-        }*/
-        
     }
 
     static async Task<bool> WaitForAppStartup(IHostApplicationLifetime lifetime, CancellationToken stoppingToken)
